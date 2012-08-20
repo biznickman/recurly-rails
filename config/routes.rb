@@ -1,4 +1,10 @@
 RecurlyRails::Application.routes.draw do
+  root :to => "static_pages#home"
+  match 'pricing' => "static_pages#pricing"
+  get "static_pages/home"
+
+  get "static_pages/pricing"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

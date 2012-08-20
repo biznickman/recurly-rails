@@ -1,0 +1,16 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1.homepage-title{
+	text-align:left;
+	font-size: 78px;
+	padding-bottom: 30px;
+}
+.pricing-box{
+	background-color:#f3f3f3;
+	border-radius: 5px;
+	height:210px;
+}
+.pricing-padding{
+	padding:20px;
+}
