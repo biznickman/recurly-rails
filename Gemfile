@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '~> 2.0.4.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'json'
+gem 'recurly', '~> 2.1.5'
 
 group :development, :test do
 	gem 'sqlite3'

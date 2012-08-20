@@ -113,6 +113,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
+    recurly (2.1.5)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -168,6 +169,7 @@ DEPENDENCIES
   json
   pg (= 0.12.2)
   rails (= 3.2.7)
+  recurly (~> 2.1.5)
   rspec-rails (= 2.10.0)
   sass-rails (~> 3.2.3)
   spork (= 0.9.0)
