@@ -7,6 +7,7 @@ gem 'bootstrap-sass', '~> 2.0.4.0'
 
 gem 'json'
 gem 'recurly', '~> 2.1.5'
+gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do
 	gem 'sqlite3'
