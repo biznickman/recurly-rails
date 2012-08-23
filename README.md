@@ -8,3 +8,4 @@ Once this is completed, you should be able to simply fork and clone the project 
 **Notes**
 1. You must set the environment variables RECURLY_API_KEY and RECURLY_JS_PRIVATE_KEY to get the app running
 2. Also right now I've set the asset pipeline to user live compiling in production.  If you want to change, feel free to ... read up on it here: https://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar
+3. As usual, you must run *heroku run rake db:migrate* if you're using heroku to host the sample project
