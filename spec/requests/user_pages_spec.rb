@@ -1,22 +1,22 @@
 require 'spec_helper'
 
-describe "User management:" do
+describe "User management" do
 
   subject { page }
+
+  def fill_in_signup_form
+    fill_in "First name" , with: "Nick"
+    fill_in "Last name" , with: "O'Neill"
+    fill_in "Email" , with: "tester@testing.com"
+    fill_in "Password" , with: "foobar"
+    fill_in "Confirm Password" , with: "foobar"
+    check('Terms of service')
+  end
 
   describe "signup page" do
     before { visit signup_path }
 
     let(:submit) { "Continue" }
-
-    def fill_in_signup_form
-      fill_in "First name" , with: "Nick"
-      fill_in "Last name" , with: "O'Neill"
-      fill_in "Email" , with: "tester@testing.com"
-      fill_in "Password" , with: "foobar"
-      fill_in "Confirm Password" , with: "foobar"
-      check('Terms of service')
-    end
 
     describe "registration form elements" do
     	it { should have_selector('form' , :id => 'signup-form' ) }
@@ -53,11 +53,9 @@ describe "User management:" do
         #save_and_open_page
         expect { click_button submit }.to change(User , :count).by(1)
       end
-    end
-
-    
+    end  
   end
-
+  
   describe "edit profile" do
   	pending "create an edit profile page for once a user is logged in"
   end
