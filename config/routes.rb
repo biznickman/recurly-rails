@@ -1,8 +1,9 @@
 RecurlyRails::Application.routes.draw do
   
   #user registration
-  get "users/new"
-  match '/signup',  to: 'users#new'
+  resources :users
+  match '/signup',  to: 'users#new', :via => [:get]
+  match '/signup',  to: 'users#create', :via => [:post]
   
   #static pages
   root :to => "static_pages#home"

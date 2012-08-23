@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  before { @user = User.new( first_name: "Nick" , last_name: "O'Neill" , email: "nick@holler.com" , password: "tester" , password_confirmation: "tester" ) }
+  before { @user = User.new( first_name: "Nick" , last_name: "O'Neill" , email: "nick@holler.com" , password: "tester" , password_confirmation: "tester" , :tos => '1' ) }
   let( :min_password_length ){ 6 }
 
   subject { @user }

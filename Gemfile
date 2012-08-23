@@ -23,6 +23,7 @@ group :test do
 	gem 'capybara', '1.1.2'
 	gem 'guard-spork'
 	gem 'spork', '0.9.0'
+	gem "launchy", "~> 2.1.2"
 end
 
 # Gems used only for assets and not required

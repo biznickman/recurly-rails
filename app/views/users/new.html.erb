@@ -2,20 +2,37 @@
 <p style="padding-top:105px; margin-bottom:20px" class="clearfix"><span style="-moz-border-radius:3px;-webkit-border-radius:3px;background:#333;color:#fff;padding:5px 10px;float:left"><strong>Step 1.</strong> Create an Account</span><span style="padding:5px 10px;float:left;margin-left:10px;float:left">Step 2. Fill out your Billing Information</span></p>
 
 <div class='row'>
-<form class="well span4" id="signup-form">
-	<label>First Name</label>
-	<input type='text' class="span3" name='first_name' />
-	<label>Last Name</label>
-	<input type='text' class="span3" name='last_name' />
-	<label>Email</label>
-	<input type='text' class="span3" name='email' />
-	<label>Password</label>
-	<input type='password' class='span3' name='password' />
-	<label>Confirm Password</label>
-	<input type='password' class='span3' name='password_confirmation' />
+<!--<form class="well span4" id="signup-form" method='post'>-->
+<%= form_for @user , :url => signup_path, :html => { :class => "well span4" , :id => "signup-form" }  do |f| %>
+	<%= render 'shared/error_messages' %>
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name %>
+
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+
+	<%= f.label :password_confirmation , "Confirm Password" %>
+	<%= f.password_field :password_confirmation %>
+	<!--<label for="fname">First Name</label>
+	<input type='text' class="span3" name='first_name' id='fname' />
+	<label for="lname">Last Name</label>
+	<input type='text' class="span3" name='last_name' id='lname' />
+	<label for="email">Email</label>
+	<input type='text' class="span3" name='email' id='email' />
+	<label for="pass">Password</label>
+	<input type='password' class='span3' name='password' id='pass' />
+	<label for="passc">Confirm Password</label>
+	<input type='password' class='span3' name='password_confirmation' id='passc' />-->
 	<label class='checkbox'>
-		<input type='checkbox' name='tos' />Terms of service
+		<input type='checkbox' name='user[tos]' value='1' />Terms of service
 	</label>
-	<button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+	<button type="submit" class="btn btn-primary">Continue <i class="icon-arrow-right icon-white"></i></button>
+<% end %>
 </div>

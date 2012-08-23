@@ -69,6 +69,8 @@ GEM
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
     json (1.7.5)
+    launchy (2.1.2)
+      addressable (~> 2.3)
     libwebsocket (0.1.5)
       addressable
     listen (0.4.7)
@@ -169,6 +171,7 @@ DEPENDENCIES
   guard-spork
   jquery-rails
   json
+  launchy (~> 2.1.2)
   pg (= 0.12.2)
   rails (= 3.2.7)
   recurly (~> 2.1.5)
