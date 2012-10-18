@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   	@user = User.new(params[:user])
   	if @user.save
   		# Handle a successful save
-      #redirect_to subscription_path
+      # Create a user's Recurly account to associate this with
+      redirect_to new_subscription_path
   	else
   		render 'new'
   	end
