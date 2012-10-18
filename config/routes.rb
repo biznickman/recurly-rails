@@ -1,7 +1,11 @@
 RecurlyRails::Application.routes.draw do
-  
+  #resources :subsctiptions
+  #get "subscriptions/new"
+  #get "subscriptions/create"
+  #get "subscriptions/update"
+
   #user registration
-  resources :users
+  resources :subscriptions , :users
   match '/signup',  to: 'users#new', :via => [:get]
   match '/signup',  to: 'users#create', :via => [:post]
   
